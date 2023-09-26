@@ -39,8 +39,11 @@ gaps inner 9
 gaps outer 9
 
 exec --no-startup-id nitrogen --restore
-exec xrandr --output DP-2 --mode 1920x1080 --rate 165
-exec xrandr --output HDMI-0 --mode 1920x1080 --rotate left
+#exec --no-startup-id picom
+
+# Monitor configuration
+#exec xrandr --output DP-2 --mode 1920x1080 --rate 165
+#exec xrandr --output HDMI-0 --mode 1920x1080 --rotate left
 
 default_border pixel 1
 hide_edge_borders none
