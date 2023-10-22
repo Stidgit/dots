@@ -1,2 +1,2 @@
-print("Welcome to Neovim Stid!"
+print("Welcome back to Neovim Stid!")
 require("stidgit")
