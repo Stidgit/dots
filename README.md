@@ -1,2 +1,2 @@
 **Nvim**
-Requires: nvim.packer
+Requires: [packer.nvim](https://github.com/wbthomason/packer.nvim)
