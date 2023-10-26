@@ -35,8 +35,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Custom
-gaps inner 9
-gaps outer 9
+gaps inner 7
+gaps outer 7
 
 exec --no-startup-id nitrogen --restore
 #exec --no-startup-id picom
@@ -203,8 +203,8 @@ bindsym $mod+r mode "resize"
 
 bar {
         status_command i3status
-        position bottom
-        font pango:Awesome 10
+        position top
+        font pango:Awesome 12
         colors {
         background #2f343f
         statusline #ffffff
@@ -216,3 +216,15 @@ bar {
         inactive_workspace      #2f343f #2f343f #d8dee8
     }       
 }
+
+# Colors
+set $blue 	#1b1e26
+set $yellow	#f0d48b
+set $grey	#b0b287
+set $green	#789073
+
+
+# My colors
+client.focused		$yellow 	$blue		$yellow		$yellow		$yellow
+client.focused_inactive	$grey		$grey		$grey		$grey		$grey	
+client.unfocused	$grey		$blue		$grey		$grey		$grey
