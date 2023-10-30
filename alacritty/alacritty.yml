@@ -6,10 +6,9 @@ font:
   bold:
     family: Iosevka NFP
     style: Bold
-  
 
-window:
-  opacity: 0.9
+#window:
+  #opacity: 0.8
 
 import:
-  - ~/.config/alacritty/themes/themes/palenight.yaml
+  - ~/.config/alacritty/themes/themes/everforest_dark.yaml
