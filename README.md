@@ -1,5 +1,5 @@
 **Fonts**
-  - Nerdo-Fonts
+  - Nerd-Fonts
   - Iosevka
 
 **Nvim**
