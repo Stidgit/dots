@@ -1,0 +1,40 @@
+#!/bin/python3
+
+import pyperclip
+import sys
+
+def help_message():
+    print("python clipboard 0.0.1\n\nArguments:\n    -s, for inputting string:\n        pycb -s 'Example string!'\n\n    -f, for copying file contents:\n        pycb -f ./example_dir/example_file\n\n    -p, for piping text input:\n        less example_file | pycb -p\n\n    -o, for outputting the current clipboard:\n        pycb -o\n\n    -a, for appending clipboard content to the end of a file:\n        pycb -a file.txt")
+
+if len(sys.argv) == 1:
+    help_message()
+else:
+    command = sys.argv[1]
+
+    match command:
+        case "-s":
+            if len(sys.argv) >= 3:
+                pyperclip.copy(sys.argv[2])
+            else:
+                print('Error: Missing argument for -s option')
+        case "-f":
+            if len(sys.argv) >= 3:
+                pyperclip.copy(open(sys.argv[2], "r").read().strip())
+                print('Copied to clipboard')
+            else:
+                print('Error: Missing argument for -f option')
+        case "-o":
+            clipboard_content = pyperclip.paste()
+            print(f'\n{clipboard_content}')
+        case "-p":
+            pyperclip.copy(sys.stdin.read().strip())
+        case "-a":
+            if len(sys.argv) >= 3:
+                clipboard_content = pyperclip.paste()
+                with open(sys.argv[2], "a") as file:
+                    file.write(clipboard_content)
+                print(f'Clipboard content appended to file {sys.argv[2]}')
+            else:
+                print('Error: missing argument for -a option')
+        case _:
+            help_message()
