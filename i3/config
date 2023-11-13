@@ -15,7 +15,7 @@ exec xrandr --output HDMI-0 --mode 1920x1080 --rotate left
 floating_modifier $mod
 
 # Open a new terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -130,19 +130,18 @@ bindsym $mod+r mode "resize"
 
 # i3 bar config
 bar {
-   	height 25
+	height 25
 	position bottom
     	font pango:Iosevka NFP 15
 	status_command i3status
-    colors {
-            background #212121 
-            statusline #ffffff
-	    separator  #212121
-
-            #                   border  background text
-            focused_workspace  #212121 #494949    #9fed5c
-            inactive_workspace #212121 #494949    #ffffff
-    }
+    	colors {
+        background #4f5151
+        statusline #ffffff
+	separator  #4f5151 
+        #                   border  background text
+        focused_workspace  #3a3a3a #3a3a3a    #3fb6d3
+        inactive_workspace #3a3a3a #3a3a3a    #ffffff
+	}
 }
 
 # Color variables
