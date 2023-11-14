@@ -124,11 +124,11 @@ _G.packer_plugins = {
     path = "/home/stid/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rose-pine"] = {
-    config = { "\27LJ\2\0029\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+  ["solarized.nvim"] = {
+    config = { "\27LJ\2\2_\0\0\2\0\a\0\n6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\4\0009\0\5\0'\1\6\0B\0\2\1K\0\1\0\14solarized\16colorscheme\bcmd\tdark\15background\6o\bvim\0" },
     loaded = true,
-    path = "/home/stid/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
+    path = "/home/stid/.local/share/nvim/site/pack/packer/start/solarized.nvim",
+    url = "https://github.com/maxmx03/solarized.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -143,10 +143,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
+-- Config for: solarized.nvim
+time([[Config for solarized.nvim]], true)
+try_loadstring("\27LJ\2\2_\0\0\2\0\a\0\n6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\4\0009\0\5\0'\1\6\0B\0\2\1K\0\1\0\14solarized\16colorscheme\bcmd\tdark\15background\6o\bvim\0", "config", "solarized.nvim")
+time([[Config for solarized.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -7,14 +7,13 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Rose-Pine Theme
-  use ({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
+	use {
+		'maxmx03/solarized.nvim',
+		config = function()
+			vim.o.background = 'dark' -- or 'light'
+			vim.cmd.colorscheme 'solarized'
+		end
+	}
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
