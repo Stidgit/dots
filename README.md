@@ -7,4 +7,5 @@
   - unzip and npm required to install bash and c LSPs
 
 # Alacritty
-**Requires:** Nerd-Fonts
+**Optional:**
+  - nerd-fonts
