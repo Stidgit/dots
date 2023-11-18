@@ -7,12 +7,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-	use {
-		'maxmx03/solarized.nvim',
-		config = function()
-			vim.o.background = 'dark' -- or 'light'
-			vim.cmd.colorscheme 'solarized'
-		end
+  use {
+	  'maxmx03/solarized.nvim',
+	  config = function()
+		  vim.o.background = 'dark' -- or 'light'
+		  vim.cmd.colorscheme 'solarized'
+	  end
 	}
 
   use {
