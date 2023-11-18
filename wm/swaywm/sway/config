@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu rofi -show drun
+set $menu fuzzel
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 output * bg ~/wallpapers/wallhaven-ymp23d.png fill
@@ -24,14 +24,23 @@ exec swayidle -w \
 #       middle_emulation enabled
 #   }
 
+input "type:pointer" accel_profile flat
+bindsym $mod+o exec killall -SIGUSR1 waybar
 output eDP-1 pos 0 0 res 1920x1080
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
+
 floating_modifier $mod normal
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+bindsym XF86AudioMute exec pamixer --toggle-mute 
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+
 #
 # Moving around:
 #
@@ -125,15 +134,7 @@ for_window [app_id=".*"] opacity $opacity
 
 # Bar
 bar {
-    position top
-
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #323232 #323232 #5c5c5c
-    }
+	swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
