@@ -9,7 +9,13 @@ set $term alacritty
 set $menu fuzzel
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg ~/wallpapers/wallhaven-ymp23d.png fill
+# brightness
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+
+# wallpaper
+set $wp_var /home/stid/wallpapers/wallhaven-p2eg9e.jpg
+output * bg $wp_var fill
 
 exec swayidle -w \
           timeout 300 'swaylock -f -c 000000' \
@@ -27,6 +33,8 @@ exec swayidle -w \
 input "type:pointer" accel_profile flat
 bindsym $mod+o exec killall -SIGUSR1 waybar
 output eDP-1 pos 0 0 res 1920x1080
+
+bindsym $mod+p exec flameshot gui
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
@@ -128,7 +136,7 @@ gaps outer 5
 
 default_border none
 
-set $opacity 0.9
+set $opacity 0.95
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
