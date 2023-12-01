@@ -2,5 +2,5 @@
   - nerd-fonts
   - ttf-font-awesome
 
-**vim**
+**NVIM**
   - [packer.nvim](https://github.com/wbthomason/packer.nvim), neccessary compilers. Fresh config requires sourcing (:so) and syncing (:PackerSync).
