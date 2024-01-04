@@ -1,0 +1,17 @@
+import = ["/home/stid/.config/alacritty/themes/themes/citylights.toml"]
+
+[font]
+size = 15
+
+[font.bold]
+family = "Terminus"
+
+[font.italic]
+family = "Terminus"
+
+[font.normal]
+family = "Terminus"
+
+[window.padding]
+x = 12
+y = 12
