@@ -1,0 +1,17 @@
+import = ["/home/stid/.config/alacritty/themes/themes/nord.toml"]
+
+[font]
+size = 12
+
+[font.bold]
+family = "Iosevka"
+
+[font.italic]
+family = "Iosevka"
+
+[font.normal]
+family = "Iosevka"
+
+[window.padding]
+x = 20
+y = 20

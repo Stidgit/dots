@@ -1,0 +1,15 @@
+[language-server.mylang-lsp]
+command = "mylang-lsp"
+
+[[language]]
+name = "rust"
+auto-format = false
+
+[[language]]
+name = "c"
+
+[[language]]
+name = "python"
+
+[[language]]
+name = "toml"
